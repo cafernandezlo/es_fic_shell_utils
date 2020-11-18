@@ -1,0 +1,12 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+
+\title{RNA-seq data analysis with Galaxy}
+\author{by Carlos Fernandez-Lozano}
+\centering
+\date{March 2020}
+
+\begin{document}
+
+\maketitle
+
