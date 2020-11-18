@@ -13,10 +13,11 @@ De cara a mostrar durante la docencia o en algún congreso el uso de algún tipo
 
 **Pasos**
 
-* Genera las copias de pantalla de forma consecutiva y guarda los ficheros resultantes *.png a disco. En mi caso al ser una máquina Ubuntu con locale en inglés, se llamarán _Screenshot*.png_
+* Genera las copias de pantalla de forma consecutiva y guarda los ficheros resultantes con extensión png a disco. En mi caso al ser una máquina Ubuntu con locale en inglés, se llamarán _Screenshot*.png_
 * En el fichero _begin_ he incluido una cabecera de presentación _beamer_ con el tema _Madrid_
 * En el fichero _end_ he incluido una _slide_ de fin y el cierre del documento LaTex
-* El fichero ejecutable _dotexslides.sh_ se encarga de hacer el crop de las imágenes de forma automática (recuerda ajustarlo a la posición de interés) y genera un fichero __slides.tex__ con la unión de _begin_, una _slide_ por cada imagen que encuentre en la carpeta y _end_
+* El fichero ejecutable _dotexslides.sh_ se encarga de hacer el crop de las imágenes de forma automática (recuerda ajustarlo a la posición de interés) y genera un fichero __slides.tex__ con la unión de _begin_, una _slide_ por cada imagen que encuentre en la carpeta y _end_. Además elimina imágenes cortadas previamente
+* Tener ficheros de inicio y fin separados es buena idea por si es necesario modificar aspectos generales de la presentación.
 
 Para cambiar tamaños y posiciones de corte en la copia de pantalla y reducir espacio e información no interesante hay que modificar en _dotexslides.sh_ lo siguiente:
 
@@ -36,5 +37,13 @@ Delegates (built-in): bzlib djvu fftw fontconfig freetype jbig jng jpeg lcms lqr
 ```
 
 La ayuda de [convert](https://www.imagemagick.org/script/command-line-options.php#crop). En este caso con la resolución de mi pantalla y el aspecto de mi región de interés se ajusta: _anchoxalto+offsetX+offsetY_ de acuerdo a la esquina izquierda superior de la imagen.
+
+Para ver el funcionamiento ejecuta el siguiente comando dentro del repositorio:
+
+```
+cfernandez~/git/es_fic_shell_utils_latexSlides> sh dotexslides.sh
+```
+
+y comprueba el fichero de salida _slides.tex_. Para ello solamente tendrás que usar, por ejemplo [overleaf](www.overleaf.com), crear un nuevo proyecto y subir los ficheros _slides.tex_ y todos los que comiencen por _crop_ de la carpeta donde has ejecutado la utilidad. 
 
 Este repositorio tiene licencia MIT.
