@@ -46,4 +46,30 @@ cfernandez~/git/es_fic_shell_utils_latexSlides> sh dotexslides.sh
 
 y comprueba el fichero de salida _slides.tex_. Para ello solamente tendrás que usar, por ejemplo [overleaf](www.overleaf.com), crear un nuevo proyecto y subir los ficheros _slides.tex_ y todos los que comiencen por _crop_ de la carpeta donde has ejecutado la utilidad. 
 
+## PDF. Reducir tamaño
+
+A veces es necesario reducir el tamaño de algún documento pdf. Para ello, una opción rápida es cambiar los dpi entre _screen_ (72 dpi, calidad para ver en pantalla) y _prepress_ (300 dpi, alta calidad):
+
+```
+cfernandez:~> gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -sOutputFile=output.pdf input.pdf 
+GPL Ghostscript 9.50 (2019-10-15)
+Copyright (C) 2019 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Processing pages 1 through 11.
+Page 1
+Page 2
+Page 3
+Page 4
+Page 5
+Page 6
+Page 7
+Page 8
+Page 9
+Page 10
+Page 11
+```
+
+Dependiendo del contenido del PDF puede ser suficiente. Más [info](https://www.ghostscript.com/doc/current/VectorDevices.htm).
+
 Este repositorio tiene licencia MIT.
