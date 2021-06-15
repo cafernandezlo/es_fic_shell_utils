@@ -79,9 +79,9 @@ Es posible compartir un fichero desde nuestras cuentas de office365 y que sea de
 **Pasos**
 
 * Desde office365 selecciona el fichero y dale a compartir. Asegúrate de marcar la opción _cualquiera persona que tenga el vínculo_.
-* Copia el enlace: https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?e=EX6QPM 
+* Copia el enlace: [https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?e=EX6QPM](https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?e=EX6QPM)
 * Quita lo que va después de la ?, en mi caso e=EX6QPM
-* Añade después de la ? download=1, el nuevo enlace quedaría así: https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?download=1 
+* Añade después de la ? download=1, el nuevo enlace quedaría así: [https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?download=1](https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?download=1) 
 * Lanza el _wget_
 
 ```
