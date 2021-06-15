@@ -72,4 +72,35 @@ Page 11
 
 Dependiendo del contenido del PDF puede ser suficiente. Más [info](https://www.ghostscript.com/doc/current/VectorDevices.htm).
 
+## Compartir fichero en office365 y descargar por consola
+
+Es posible compartir un fichero desde nuestras cuentas de office365 y que sea descargable por consola en lugar de acceder vía navegador usando, por ejemplo _wget_. 
+
+**Pasos**
+
+* Desde office365 selecciona el fichero y dale a compartir. Asegúrate de marcar la opción _cualquiera persona que tenga el vínculo_.
+* Copia el enlace: https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?e=EX6QPM 
+* Quita lo que va después de la ?, en mi caso e=EX6QPM
+* Añade después de la ? download=1, el nuevo enlace quedaría así: https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?download=1 
+* Lanza el _wget_
+
+```
+ cfernandez  ~  Downloads  wget https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?download=1 -O fichero.pdf
+--2021-06-15 14:13:03--  https://udcgal-my.sharepoint.com/:b:/g/personal/carlos_fernandez_udc_es/EV9lHD_omApEgSDT9ZT7Q9kBUUTVRRkktVebe5b2wQ2ONg?download=1
+Resolving udcgal-my.sharepoint.com (udcgal-my.sharepoint.com)... 13.107.136.9
+Connecting to udcgal-my.sharepoint.com (udcgal-my.sharepoint.com)|13.107.136.9|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /personal/carlos_fernandez_udc_es/Documents/publico/itworks.pdf?originalPath=aHR0cHM6Ly91ZGNnYWwtbXkuc2hhcmVwb2ludC5jb20vOmI6L2cvcGVyc29uYWwvY2FybG9zX2Zlcm5hbmRlel91ZGNfZXMvRVY5bEhEX29tQXBFZ1NEVDlaVDdROWtCVVVUVlJSa2t0VmViZTViMndRMk9OZz9ydGltZT1DTENtN2ZZdjJVZw [following]
+--2021-06-15 14:13:04--  https://udcgal-my.sharepoint.com/personal/carlos_fernandez_udc_es/Documents/publico/itworks.pdf?originalPath=aHR0cHM6Ly91ZGNnYWwtbXkuc2hhcmVwb2ludC5jb20vOmI6L2cvcGVyc29uYWwvY2FybG9zX2Zlcm5hbmRlel91ZGNfZXMvRVY5bEhEX29tQXBFZ1NEVDlaVDdROWtCVVVUVlJSa2t0VmViZTViMndRMk9OZz9ydGltZT1DTENtN2ZZdjJVZw
+Reusing existing connection to udcgal-my.sharepoint.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 7507 (7,3K) [application/pdf]
+Saving to: ‘fichero.pdf’
+
+fichero.pdf         100%[===================>]   7,33K  --.-KB/s    in 0s      
+
+2021-06-15 14:13:04 (134 MB/s) - ‘fichero.pdf’ saved [7507/7507]
+```
+it works!
+
 Este repositorio tiene licencia MIT.
